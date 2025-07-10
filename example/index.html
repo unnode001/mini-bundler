@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Bundler Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        .console {
+            background: #1e1e1e;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin-top: 20px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚀 Mini-Bundler 测试页面</h1>
+        <p>这个页面用来测试我们的 mini-bundler 是否正常工作。打开浏览器的控制台查看输出。</p>
+
+        <div class="console" id="output">
+            正在加载打包后的代码...
+        </div>
+
+        <script>
+            // 重写 console.log 以在页面上显示输出
+            const originalLog = console.log;
+            const outputDiv = document.getElementById('output');
+
+            console.log = function (...args) {
+                originalLog.apply(console, args);
+                const message = args.map(arg =>
+                    typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
+                ).join(' ');
+                outputDiv.innerHTML += message + '\n';
+            };
+
+            outputDiv.innerHTML = '';
+        </script>
+
+        <!-- 这里将引入我们打包后的 bundle.js -->
+        <script src="./dist/bundle.js"></script>
+    </div>
+</body>
+
+</html>

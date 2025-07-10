@@ -1,0 +1,71 @@
+{
+  "name": "mini-bundler",
+  "version": "1.0.0",
+  "description": "🚀 A simplified JavaScript module bundler for educational purposes",
+  "main": "src/index.js",
+  "bin": {
+    "mini-bundler": "./bin/mini-bundler.js"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "build": "node bin/mini-bundler.js -c bundler.config.js",
+    "build:example": "node bin/mini-bundler.js -c bundler.config.js",
+    "build:circular": "node bin/mini-bundler.js -c circular.config.js",
+    "dev": "nodemon --watch src --exec \"npm run build\"",
+    "clean": "rimraf example/dist/*.js",
+    "example": "npm run build && node example/dist/bundle.js",
+    "example:circular": "npm run build:circular && node example/dist/circular-bundle.js",
+    "help": "node bin/mini-bundler.js --help",
+    "status": "node status.js"
+  },
+  "keywords": [
+    "bundler", 
+    "webpack", 
+    "modules", 
+    "educational", 
+    "javascript", 
+    "es6", 
+    "ast", 
+    "babel", 
+    "dependency-graph",
+    "learning",
+    "tutorial"
+  ],
+  "author": {
+    "name": "Mini-Bundler Contributors",
+    "url": "https://github.com/your-username/mini-bundler"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/mini-bundler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/mini-bundler/issues"
+  },
+  "homepage": "https://github.com/your-username/mini-bundler#readme",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "docs/",
+    "example/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.22.0",
+    "@babel/parser": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "@babel/traverse": "^7.22.0",
+    "commander": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "rimraf": "^5.0.0"
+  }
+}
