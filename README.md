@@ -12,8 +12,8 @@
 </p>
 
 <p align="center">
-  <a href="#特性">构建速度: 适用于小到中型项目</a> •
-  <a href="#快速开始">Bundle 大小: 包含运行时约 1-2KB 开销</a> •
+  <a >构建速度: 适用于小到中型项目</a> •
+  <a >Bundle 大小: 包含运行时约 1-2KB 开销</a>
 </p>
 
 ---
@@ -88,7 +88,7 @@ node example/dist/bundle.js
 
 ### 思路参考
 
-- 🔗 [Webpack 源码](https://github.com/webpack/webpack) - 学习真正的打包工具
+- 🔗 [Webpack](https://github.com/webpack/webpack)
 
 ## CLI 选项
 
