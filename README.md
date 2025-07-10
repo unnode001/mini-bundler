@@ -9,16 +9,11 @@
 
 <p align="center">
    简化版 JavaScript 模块打包工具, 练手程序
-   构建速度: 适用于小到中型项目
-   Bundle 大小: 包含运行时约 1-2KB 开销
 </p>
 
 <p align="center">
-  <a href="#特性">特性</a> •
-  <a href="#快速开始">快速开始</a> •
-  <a href="#工作原理">工作原理</a> •
-  <a href="#示例">示例</a> •
-  <a href="#文档">文档</a>
+  <a href="#特性">构建速度: 适用于小到中型项目</a> •
+  <a href="#快速开始">Bundle 大小: 包含运行时约 1-2KB 开销</a> •
 </p>
 
 ---
